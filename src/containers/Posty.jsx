@@ -7,32 +7,41 @@ export default class Posty extends Component {
     state={
         url: '',
         method: '',
+        body: '',
         jsonString: '',
         formatJson: '',
     }
 
     handleQueryChange = ({target}) => {
         this.setState({url: target.value});
-        console.log(this.state.url)
     }
 
     handleMethodChange = ({target}) => {
         this.setState({method: target.value})
     }
-
+    handleBodyChange = ({target}) => {
+        this.setState({body: target.value});
+    }
     handleFormSubmit = async (event) => {
         event.preventDefault();
-
         this.setState({loading: true});
-        const res = await makeRequest(this.state.url, this.state.method);
+
+        const res = await makeRequest(this.state.url, this.state.method, this.state.body);
         this.setState({loading: false, jsonString: JSON.stringify(res), formatJson: JSON.stringify(res, null, 6)});
     }
     render() {
         const {formatJson} = this.state;
         return (
             <>
-            <Query onSubmit={this.handleFormSubmit} onQueryChange={this.handleQueryChange} onMethodChange={this.handleMethodChange}/>
-            <JsonFormat text={formatJson} />
+            <Query 
+                onSubmit={this.handleFormSubmit} 
+                onQueryChange={this.handleQueryChange} 
+                onMethodChange={this.handleMethodChange}
+                onBodyChange={this.handleBodyChange}
+            />
+            <JsonFormat 
+                text={formatJson} 
+            />
             </>
         )
     }
