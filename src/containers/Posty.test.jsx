@@ -10,6 +10,7 @@ describe('tests the JSON parsing ability', () => {
         render(<Posty/>)
         screen.getByText('Posty');
         const input = await screen.findByLabelText('Enter Request Url below', {name: 'request-sender'});
+
     })
 })
 

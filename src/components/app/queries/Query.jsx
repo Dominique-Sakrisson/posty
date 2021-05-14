@@ -6,8 +6,8 @@ const Query = ({onSubmit, onQueryChange, onMethodChange}) => (
     <>
         <form onSubmit={onSubmit}>
             <h1>Posty</h1>
-            <label htmlFor='api-url'>Enter Request Url below</label><br/>
-            <input id='api-url' onChange={onQueryChange} placeholder='Enter Api Url Here' name='request-sender' type="text" /><br/>
+            <label  htmlFor='api-url'>Enter Request Url below</label><br/>
+            <input id='api-url' style={{width:'40%', padding: '10px'}} onChange={onQueryChange} placeholder='Enter Api Url Here' name='request-sender' type="text" /><br/>
             <QueryMethod onChange={onMethodChange}/>
 {/* 
             <label htmlFor='get-input'>GET</label>
