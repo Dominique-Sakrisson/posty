@@ -1,12 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import styles from '../../../styles/style.css'
 
 const JsonFormat = ({text}) => (
-    <>
-        <pre aria-label='pretty-json' json='true' style={{overflowY: 'scroll', width: '80%', height: '500px'}}>
+    <div className={styles.resCont}>
+          <p className={styles.jsonLabel}>JSON Output</p>
+        <pre aria-label='pretty-json' json='true' style={{}}>
           {text}
         </pre>
-    </>
+    </div>
 )
 
 JsonFormat.propTypes = {
