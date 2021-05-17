@@ -5,7 +5,7 @@ import '../../../styles/style.css'
 const QueryMethod = ({onChange}) => (
     <>
         <label htmlFor='get-input'>GET
-            <input  onChange={onChange} name='method-input' id='get-input' type="radio" value='GET'/>
+            <input  onChange={onChange} name='method-input' id='get-input' type="radio" value='GET' />
         </label>
     
         <label htmlFor='post-input'>POST

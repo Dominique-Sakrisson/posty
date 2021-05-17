@@ -8,7 +8,7 @@ import styles from '../styles/style.css'
 export default class Posty extends Component {
     state={
         url: '',
-        method: '',
+        method: 'GET',
         body: '',
         jsonString: '{}',
         formatJson: '',
@@ -25,8 +25,6 @@ export default class Posty extends Component {
     }
     handleBodyChange = ({target}) => {
         this.setState({body: target.value});
-        console.log(typeof(this.state.body))
-        console.log(this.state.body)
     }
     handleFormSubmit = async (event) => {
         event.preventDefault();

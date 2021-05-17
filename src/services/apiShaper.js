@@ -1,5 +1,5 @@
 export const makeRequest = async(url, method, body) => {
-   if(method === 'GET'){
+   if(method === 'GET' || method === ''){
     const res = await fetch(url, {method})
     const json = await res.json();
     return json;
@@ -8,7 +8,7 @@ export const makeRequest = async(url, method, body) => {
            'Content-Type': 'application/json'
        }});
        const json = await res.json();
-       console.log(body)
+       
        return json;
    }
   
