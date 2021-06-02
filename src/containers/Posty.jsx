@@ -1,9 +1,11 @@
-import React, { Component } from 'react'
+import React, { Component, useContext } from 'react'
 import Query from '../components/app/queries/Query'
 import {makeRequest} from '../services/apiShaper'
 import JsonFormat from '../components/app/outputs/JsonFormat'
 import HistoryList from '../components/app/outputs/history/HistoryList'
 import styles from '../styles/style.css'
+import Header from '../components/header/Header'
+import {useTheme} from '../components/state/ThemeProvider'
 
 export default class Posty extends Component {
     state={
@@ -14,7 +16,10 @@ export default class Posty extends Component {
         formatJson: '',
         history: [],
         stamp: '',
+        // theme: useTheme(),
     }
+
+
 
     handleQueryChange = ({target}) => {
         this.setState({url: target.value});
@@ -50,6 +55,7 @@ export default class Posty extends Component {
         const {formatJson, history, stamp} = this.state;
         return (
             <>
+            <Header />
             <Query 
                 onSubmit={this.handleFormSubmit} 
                 onQueryChange={this.handleQueryChange} 
