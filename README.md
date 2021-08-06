@@ -32,7 +32,7 @@ An optional request body in JSON:
 }
 ```
 
-#app returns the body or the error returned from making the request along with the history of requests made
+# app returns the body or the error returned from making the request along with the history of requests made
 ```
 {
     "status": "ok",
