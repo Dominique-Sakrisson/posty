@@ -50,6 +50,7 @@ export default class Posty extends Component {
         const {formatJson, history, stamp} = this.state;
         return (
             <>
+             <h1>Api-yi-yi</h1>
             <Query 
                 onSubmit={this.handleFormSubmit} 
                 onQueryChange={this.handleQueryChange} 
