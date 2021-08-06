@@ -5,6 +5,7 @@ Hosted with CI/CD on netlify
 
 
 **Netlify changed their pricing plans to no longer allowe browser made HTTP requests
+
 **To run, clone the repo and run the build locally
 
 ## User enteres the url of the api
