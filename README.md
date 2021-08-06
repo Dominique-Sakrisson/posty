@@ -1,7 +1,10 @@
 # posty
 Hosted with CI/CD on netlify
 
-##Tool for developing api CRUD routes
+## Tool for developing api CRUD routes
+
+## Netlify changed their pricing plans to no longer allowe browser made HTTP requests
+## To run, clone the repo and run the build locally
 
 ##User enteres the url of the api
 
@@ -49,4 +52,4 @@ An optional request body in JSON:
 }
 ```
 
-##Netlify changed their pricing plans to no longer allowe browser made HTTP requests, this makes the app no longer work without a dedicated backend
+
