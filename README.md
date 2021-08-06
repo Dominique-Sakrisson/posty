@@ -4,12 +4,12 @@ Hosted with CI/CD on netlify
 # Tool for developing api CRUD routes
 
 
-## **Netlify changed their pricing plans to no longer allowe browser made HTTP requests
-## To run, clone the repo and run the build locally
+**Netlify changed their pricing plans to no longer allowe browser made HTTP requests
+**To run, clone the repo and run the build locally
 
-##User enteres the url of the api
+## User enteres the url of the api
 
-##example:
+## example:
 
 https://newsapi.org/v2/everything?q=ford&apiKey=bf46b18ab6c9481fb9998251f6c8a7b5https://newsapi.org/v2/everything?q=ford&apiKey=bf46b18ab6c9481fb9998251f6c8a7b5
 
