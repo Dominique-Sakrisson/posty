@@ -9,7 +9,8 @@ Hosted with CI/CD on netlify
 
 https://newsapi.org/v2/everything?q=ford&apiKey=bf46b18ab6c9481fb9998251f6c8a7b5https://newsapi.org/v2/everything?q=ford&apiKey=bf46b18ab6c9481fb9998251f6c8a7b5
 
-An optional request body in JSON: 
+An optional request body in JSON:
+```
 {
    "customers":
   {
@@ -24,8 +25,10 @@ An optional request body in JSON:
     }
   }
 }
+```
 
 #app returns the body or the error returned from making the request along with the history of requests made
+```
 {
     "status": "ok",
     "totalResults": 11554,
@@ -44,3 +47,6 @@ An optional request body in JSON:
             "content": "Partners Lyft and Ford are laying the groundwork for their driverless ride-hailing plans. Today, the companies announced that Ford's Argo AI-powered cars will be available on Lyft's network later thi… [+1643 chars]"
         }
 }
+```
+
+##Netlify changed their pricing plans to no longer allowe browser made HTTP requests, this makes the app no longer work without a dedicated backend
